@@ -1,0 +1,38 @@
+# Rust build artifacts
+/target/
+**/*.rs.bk
+
+# Cargo lock — included for binary crate
+# Cargo.lock
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Sled database (runtime cache)
+.tg_cache/
+token_guardian_cache/
+
+# Environment
+.env
+.env.local
+
+# Logs
+*.log
+
+# Test coverage
+*.profraw
+*.profdata
+lcov.info
+coverage/
+
+# Feedback logs (personal usage data)
+feedback/real-log-*.md
+dev
