@@ -49,8 +49,8 @@ Content type is auto-detected — no manual configuration needed.
 ### Build
 
 ```bash
-git clone https://github.com/hienlv102/tokenGuardian.git
-cd tokenGuardian
+git clone https://github.com/hienlv102/token-guardian-.git
+cd token-guardian-
 cargo build --release
 ```
 
@@ -97,12 +97,12 @@ Measured on real-world files:
 
 - **MCP tool-call overhead** — each MCP call has inherent JSON-RPC overhead. For very small files, this overhead can exceed the savings
 - **Dictionary is static** — hand-curated patterns don't scale. Frequency-based dictionary generation would be better
-- **Cannot control host context injection** — the dominant source of token waste in IDEs like Kilo Code is the repeated `environment_details` block injected every turn (~800-1500 tokens × N turns). No MCP tool can address this — it requires a fix at the IDE/host level. See [this analysis](feedback/analysis.md) for details.
+- **Cannot control host context injection** — the dominant source of token waste in IDEs like Kilo Code is the repeated `environment_details` block injected every turn (~800-1500 tokens × N turns). No MCP tool can address this — it requires a fix at the IDE/host level
 
 ## Project Structure
 
 ```
-tokenGuardian/
+token-guardian-/
 ├── src/
 │   ├── main.rs              # Entry point
 │   ├── server.rs            # MCP server + tool handlers
@@ -133,10 +133,10 @@ cargo test
 cargo test -- --nocapture
 ```
 
+## Contributing
+
+This is an experimental project exploring MCP-based token optimization. Contributions, feedback, and issues are welcome.
+
 ## License
 
 MIT
-
----
-
-*This is an experimental project exploring MCP-based token optimization. Contributions and feedback welcome.*
